@@ -1,0 +1,94 @@
+Task1:
+
+import java.util.Scanner;
+
+public class Problema1 {
+
+	public static void main(String[] args) 
+	{
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Set a limit: ");
+		
+		int counter=0, sum = 0, limit=scanner.nextInt();
+		
+		for(counter=0; counter<limit; counter=counter+3)
+			sum=sum+counter;
+		
+		for(counter=0; counter<limit; counter=counter+5)
+			sum=sum+counter;
+		
+		System.out.println(sum);
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Task2:
+
+
+public class Problema2 {
+
+	public static void main(String[] args) 
+	{
+		long sum=0, fibo1=1, fibo2=2, aux=0, limit=4000000;
+		
+		while(fibo2<=limit)
+		{
+			if(fibo2%2==0)
+			sum=sum+fibo2;
+			
+			aux=fibo1;
+			fibo1=fibo2;
+			fibo2=fibo2+aux;
+		}
+			
+		System.out.println(sum);
+
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task3:
+
+
+public class Problema3 {
+
+	public static void main(String[] args) {
+		
+		int counter1=0, counter2=0;
+		boolean found=false;
+		
+		for(counter1=999; counter1>=0; counter1--)
+		{	
+			if(found==true)
+				break;
+			for(counter2=999; counter2>=0; counter2--)
+				if(isPalindrome(counter1*counter2)==true)
+					{
+					System.out.println("Found palindrome: "+counter1*counter2);
+					found=true;
+					break;
+					}
+		}
+			
+	}
+
+	public static boolean isPalindrome(int number)
+	{
+		int reverse=0, copy=number;
+		
+		while(number!=0)
+		{
+			reverse=reverse*10+number%10;
+			number=number/10;
+		}
+		
+		if(reverse==copy)
+			return true;
+		else
+			return false;
+	}
+}
