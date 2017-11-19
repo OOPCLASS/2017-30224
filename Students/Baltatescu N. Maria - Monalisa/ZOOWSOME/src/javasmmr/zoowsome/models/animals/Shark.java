@@ -1,12 +1,10 @@
 package javasmmr.zoowsome.models.animals;
 
 public class Shark extends Aquatic {
-	public Shark() {
-		super.setNrOfLegs(0);
-		super.setName("Riki");
-	}
 	
-	public Shark(int avgSwimDepth, WaterType waterType) {
-		super(avgSwimDepth, waterType);
+	public Shark(int avgSwimDepth, WaterType waterType, double maintenanceCost, double dangerPerc) {
+		super(avgSwimDepth, waterType, maintenanceCost, dangerPerc);
+		super.setName("Riki");
+		super.setNrOfLegs(0);
 	}
 }

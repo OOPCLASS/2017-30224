@@ -1,12 +1,10 @@
 package javasmmr.zoowsome.models.animals;
 
 public class Parrot extends Bird {
-	public Parrot() {
-		super.setNrOfLegs(2);
+
+	public Parrot(boolean migrates, int avgFlightAltitude, double maintenanceCost, double dangerPerc) {
+		super(migrates, avgFlightAltitude, maintenanceCost, dangerPerc);
 		super.setName("Paco");
-	}
-	
-	public Parrot(boolean migrates, int avgFlightAltitude) {
-		super(migrates, avgFlightAltitude);
+		super.setNrOfLegs(2);
 	}
 }

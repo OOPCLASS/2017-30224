@@ -23,23 +23,36 @@ public final class Constants {
 			public static final String Turtle = "TURTLE";
 		}
 
-		public static final class Birds { 
+		public static final class Birds {
 			public static final String Parrot = "PARROT";
 			public static final String Owl = "OWL";
-			public static final String Cock = "COCK";	
+			public static final String Cock = "COCK";
 		}
 
 		public static final class Aquatics {
-			public static final String CatFish  = "CATFISH";
+			public static final String CatFish = "CATFISH";
 			public static final String Shark = "SHARK";
 			public static final String Octopus = "OCTOPUS";
 		}
-	 
-		public static final class Insects { 
+
+		public static final class Insects {
 			public static final String Spider = "SPIDER";
 			public static final String Bee = "BEE";
 			public static final String Ant = "ANT";
-	  } 
-	 
-	} 
+		}
+
+	}
+
+	public static final class Employees {
+		public static final class Caretaker {
+			public static final String TCO_SUCCESS = "Success";
+			public static final String TCO_KILLED = "Killed";
+			public static final String TCO_NO_TIME = "No_time";
+		}
+	}
+
+	public static final class TypeOfEmployees {
+		public static final String CARETAKER = "Caretaker";
+	}
+
 }

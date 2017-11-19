@@ -1,12 +1,9 @@
 package javasmmr.zoowsome.models.animals;
-
 public class Ant extends Insect {
-	public Ant() {
-		super.setNrOfLegs(6);
-		super.setName("Ani");
-	}
 	
-	public Ant(boolean canFly, boolean isDangerous) {
-		super(canFly, isDangerous);
+	public Ant(boolean canFly, boolean isDangerous, double maintenanceCost, double dangerPerc) {
+		super(canFly, isDangerous, maintenanceCost, dangerPerc);
+		super.setName("Ani");
+		super.setNrOfLegs(6);
 	}
 }

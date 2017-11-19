@@ -1,12 +1,10 @@
 package javasmmr.zoowsome.models.animals;
 
 public class Dolphin extends Mammal {
-	public Dolphin() {
-		super.setNrOfLegs(0);
+	public Dolphin(float normalBodyTemp, float percBodyHair, double maintenanceCost, double dangerPerc) {
+		super(normalBodyTemp, percBodyHair, maintenanceCost, dangerPerc);
 		super.setName("Didi");
+		super.setNrOfLegs(0);
 	}
-
-	public Dolphin(float normalBodyTemp, float percBodyHair) {
-		super(normalBodyTemp, percBodyHair);
-	}
+	
 }

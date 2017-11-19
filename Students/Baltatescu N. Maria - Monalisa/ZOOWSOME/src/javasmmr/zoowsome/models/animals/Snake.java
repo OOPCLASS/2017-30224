@@ -1,12 +1,10 @@
 package javasmmr.zoowsome.models.animals;
 
 public class Snake extends Reptile {
-	public Snake() {
-		super.setNrOfLegs(0);
+
+	public Snake(boolean laysEggs, double maintenanceCost, double dangerPerc) {
+		super(laysEggs, maintenanceCost, dangerPerc);
 		super.setName("Sisi");
-	}
-	
-	public Snake(boolean laysEggs) {
-		super(laysEggs);
+		super.setNrOfLegs(0);
 	}
 }

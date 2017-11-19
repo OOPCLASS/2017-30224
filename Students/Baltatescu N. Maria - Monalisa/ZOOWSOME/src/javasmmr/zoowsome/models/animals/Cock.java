@@ -1,12 +1,10 @@
 package javasmmr.zoowsome.models.animals;
 
 public class Cock extends Bird {
-	public Cock() {
-		super.setNrOfLegs(2);
-		super.setName("Coco");
-	}
 	
-	public Cock(boolean migrates, int avgFlightAltitude) {
-		super(migrates, avgFlightAltitude);
+	public Cock(boolean migrates, int avgFlightAltitude, double maintenanceCost, double dangerPerc) {
+		super(migrates, avgFlightAltitude, maintenanceCost, dangerPerc);
+		super.setName("Coco");
+		super.setNrOfLegs(2);
 	}
 }
