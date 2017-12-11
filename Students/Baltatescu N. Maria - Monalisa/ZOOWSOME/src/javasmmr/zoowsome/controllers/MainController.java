@@ -15,6 +15,7 @@ import org.xml.sax.SAXException;
 
 import javasmmr.zoowsome.models.employees.*;
 import javasmmr.zoowsome.repositories.*;
+
 public class MainController {
 
 	public static void main(String[] args) {
@@ -112,24 +113,24 @@ public class MainController {
 		 * 
 		 * // Merge si pentru tabloul de animale creat random :)
 		 */
-		/*AnimalFactory animalFactory = new AnimalFactory();
+		AnimalFactory animalFactory = new AnimalFactory();
 		SpeciesFactory specie1;
 		SpeciesFactory specie2;
 		SpeciesFactory specie3;
 		specie1 = animalFactory.getSpeciesFactory(Constants.Species.Mammals);
 		specie2 = animalFactory.getSpeciesFactory(Constants.Species.Birds);
 		specie3 = animalFactory.getSpeciesFactory(Constants.Species.Reptiles);
-		
+
 		Animal myAnimals[] = new Animal[6];
 		myAnimals[0] = specie1.getAnimal(Constants.Animals.Mammals.Tiger);
 		myAnimals[1] = specie1.getAnimal(Constants.Animals.Mammals.Dolphin);
-		
+
 		myAnimals[2] = specie2.getAnimal(Constants.Animals.Birds.Owl);
 		myAnimals[3] = specie2.getAnimal(Constants.Animals.Birds.Parrot);
-		
+
 		myAnimals[4] = specie3.getAnimal(Constants.Animals.Reptiles.Chameleon);
 		myAnimals[5] = specie3.getAnimal(Constants.Animals.Reptiles.Turtle);
-		
+
 		AnimalRepository myAnimalRepository = new AnimalRepository();
 		ArrayList animals = new ArrayList();
 		animals.add(myAnimals[0]);
@@ -138,60 +139,55 @@ public class MainController {
 		animals.add(myAnimals[3]);
 		animals.add(myAnimals[4]);
 		animals.add(myAnimals[5]);
-		
+
 		try {
 			myAnimalRepository.save(animals);
-		}
-		catch(FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 			System.out.println("Asigura-te ca ai fisierul");
-		}
-		catch(XMLStreamException e) {
+		} catch (XMLStreamException e) {
 			System.out.println("Rezolvarea execeptiei Xml");
 		}
-		
+
 		try {
 			myAnimalRepository.load();
-		}
-		catch(ParserConfigurationException e) {
+		} catch (ParserConfigurationException e) {
 			System.out.println("Rezolvarea execeptiei ParserConfiguration");
-		}
-		catch(SAXException e) {
+		} catch (SAXException e) {
 			System.out.println("Rezolvarea execeptiei SAX");
-		}
-		catch(IOException e) {
+		} catch (IOException e) {
 			System.out.println("Rezolvarea execeptiei IO");
 		}
-		*/
 		Caretaker caretaker1 = new Caretaker("Popescu Ion", 1200.0, false, 1);
-		 caretaker1.setWorkingHours(6.0); 
-		 Caretaker caretaker2 = new Caretaker("Georgescu Maria", 1300.0, false, 2); 
-		 caretaker2.setWorkingHours(3.0);
-		 Caretaker caretaker3 = new Caretaker("Ionescu Vasile", 1250.0, false, 3);
-		 caretaker3.setWorkingHours(8.0); 
-		 Caretaker caretaker4 = new Caretaker("Lupescu Gheorghe", 1400.0, false, 4);
-		 caretaker4.setWorkingHours(7.0); 
-		 Caretaker caretaker5 = new Caretaker("Mircescu Teo", 1100.0, false, 5); 
-		 caretaker5.setWorkingHours(3.0);
-		  
-		  EmployeeRepository myEmployeeRepository = new EmployeeRepository();
-		  ArrayList employees = new ArrayList();
-		  employees.add(caretaker1);
-		  employees.add(caretaker2);
-		  employees.add(caretaker3);
-		  employees.add(caretaker4);
-		  employees.add(caretaker5);
-		  
-		  try {
+		caretaker1.setWorkingHours(6.0);
+		Caretaker caretaker2 = new Caretaker("Georgescu Maria", 1300.0, false, 2);
+		caretaker2.setWorkingHours(3.0);
+		Caretaker caretaker3 = new Caretaker("Ionescu Vasile", 1250.0, false, 3);
+		caretaker3.setWorkingHours(8.0);
+		Caretaker caretaker4 = new Caretaker("Lupescu Gheorghe", 1400.0, false, 4);
+		caretaker4.setWorkingHours(7.0);
+		Caretaker caretaker5 = new Caretaker("Mircescu Teo", 1100.0, false, 5);
+		caretaker5.setWorkingHours(3.0);
+
+		EmployeeRepository myEmployeeRepository = new EmployeeRepository();
+		ArrayList employees = new ArrayList();
+		employees.add(caretaker1);
+		employees.add(caretaker2);
+		employees.add(caretaker3);
+		employees.add(caretaker4);
+		employees.add(caretaker5);
+
+		try {
 			myEmployeeRepository.save(employees);
 		} catch (FileNotFoundException | XMLStreamException e) {
 			e.printStackTrace();
 		}
-		  try {
-			myEmployeeRepository.load();
+		try {
+			myEmployeeRepository.load();// metodele load imi genereaza niste erori, nu exceptii, pe care nu stiu sa le
+										// rezolv
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 		}
-		  
+
 	}
 
 }
