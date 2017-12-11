@@ -1,12 +1,21 @@
 package javasmmr.zoowsome.models.employees;
 
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
 import java.util.Random;
 
-public abstract class Employee {
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
+
+import javasmmr.zoowsome.models.interfaces.*;
+
+public abstract class Employee implements XML_Parsable{
 	private String name;
-	private long id;
-	private double salary;
-	private boolean isDead;
+	private Integer id;
+	private Double salary;
+	private Boolean isDead;
 	
 	
 	public String getName() {
@@ -17,30 +26,41 @@ public abstract class Employee {
 		this.name = name;
 	}
 	
-	public long getId() {
+	public Integer getId() {
 		return id;
 	}
 	
-	public void setId() {
-		Random random = new Random();
-		long id = random.nextLong();
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	
-	public double getSalary() {
+	public Double getSalary() {
 		return salary;
 	}
 	
-	public void setSalary(double salary) {
+	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
 	
-	public boolean getIsDead() {
+	public Boolean getIsDead() {
 		return isDead;
 	}
 	
 	public void setIsDead(boolean isDead) {
 		this.isDead = isDead;
+	}
+	
+	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+		createNode(eventWriter, "name", String.valueOf(this.name));
+		createNode(eventWriter, "id", String.valueOf(this.id));
+		createNode(eventWriter, "salary", String.valueOf(this.salary));
+		createNode(eventWriter, "isDead", String.valueOf(this.isDead));
+	}
+	public void decodeFromXml(Element element) {
+		setName(element.getElementsByTagName("name").item(0).getTextContent());
+		setId(Integer.valueOf((element.getElementsByTagName("id").item(0).getTextContent())));
+		setSalary(Double.valueOf((element.getElementsByTagName("salary").item(0).getTextContent())));
+		setIsDead(Boolean.valueOf((element.getElementsByTagName("isDead").item(0).getTextContent())));
 	}
 }
 

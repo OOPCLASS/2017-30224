@@ -1,0 +1,60 @@
+<?xml version="1.0"?>< :content>
+< :Animal>
+	< :nrOfLegs>4</ :nrOfLegs>
+	< :name>Timi</ :name>
+	< :maintenanceCost>6.0</ :maintenanceCost>
+	< :dangerPerc>0.9</ :dangerPerc>
+	< :takenCareOf>false</ :takenCareOf>
+	< :normalBodyTemp>37.0</ :normalBodyTemp>
+	< :percBodyHair>0.9</ :percBodyHair>
+	< :Discriminant>TIGER</ :Discriminant>
+</ :Animal>
+< :Animal>
+	< :nrOfLegs>0</ :nrOfLegs>
+	< :name>Didi</ :name>
+	< :maintenanceCost>6.0</ :maintenanceCost>
+	< :dangerPerc>0.1</ :dangerPerc>
+	< :takenCareOf>false</ :takenCareOf>
+	< :normalBodyTemp>37.0</ :normalBodyTemp>
+	< :percBodyHair>0.0</ :percBodyHair>
+	< :Discriminant>DOLPHIN</ :Discriminant>
+</ :Animal>
+< :Animal>
+	< :nrOfLegs>2</ :nrOfLegs>
+	< :name>Bobo</ :name>
+	< :maintenanceCost>4.0</ :maintenanceCost>
+	< :dangerPerc>0.5</ :dangerPerc>
+	< :takenCareOf>false</ :takenCareOf>
+	< :migrates>false</ :migrates>
+	< :avgFlightAltitude>30</ :avgFlightAltitude>
+	< :Discriminant>OWL</ :Discriminant>
+</ :Animal>
+< :Animal>
+	< :nrOfLegs>2</ :nrOfLegs>
+	< :name>Paco</ :name>
+	< :maintenanceCost>6.0</ :maintenanceCost>
+	< :dangerPerc>0.1</ :dangerPerc>
+	< :takenCareOf>false</ :takenCareOf>
+	< :migrates>false</ :migrates>
+	< :avgFlightAltitude>30</ :avgFlightAltitude>
+	< :Discriminant>PARROT</ :Discriminant>
+</ :Animal>
+< :Animal>
+	< :nrOfLegs>4</ :nrOfLegs>
+	< :name>Cami</ :name>
+	< :maintenanceCost>4.0</ :maintenanceCost>
+	< :dangerPerc>0.3</ :dangerPerc>
+	< :takenCareOf>false</ :takenCareOf>
+	< :laysEggs>true</ :laysEggs>
+	< :Discriminant>CHAMELEON</ :Discriminant>
+</ :Animal>
+< :Animal>
+	< :nrOfLegs>4</ :nrOfLegs>
+	< :name>Toto</ :name>
+	< :maintenanceCost>5.0</ :maintenanceCost>
+	< :dangerPerc>0.1</ :dangerPerc>
+	< :takenCareOf>false</ :takenCareOf>
+	< :laysEggs>true</ :laysEggs>
+	< :Discriminant>TURTLE</ :Discriminant>
+</ :Animal>
+</ :content>
